@@ -17,7 +17,15 @@ export function Nav() {
     <header className="sticky top-0 z-30 border-b-[2px] border-ink bg-cream">
       <div className="max-w-[1440px] mx-auto px-8 md:px-10 py-4 md:py-5 flex items-center justify-between">
         <div className="flex items-baseline gap-3">
-          <Link href="/" className="ff-fraunces text-[28px] md:text-[32px] font-black tracking-[-0.025em] leading-none">
+          {/* FIX 3: Both wordmark and hero headline use Fraunces (same font). The apparent visual
+               difference is Fraunces's optical-size axis — small sizes auto-render higher-contrast
+               and more regularized; display sizes are swashier. This is intentional: opsz=72 here
+               nudges the wordmark toward the display character at small scale for coherence. */}
+          <Link
+            href="/"
+            className="ff-fraunces text-[28px] md:text-[32px] font-black tracking-[-0.025em] leading-none"
+            style={{ fontVariationSettings: '"opsz" 72' }}
+          >
             FutreEng<span className="text-red">.</span>
           </Link>
           <span className="hidden md:inline ff-mono text-[10.5px] uppercase tracking-[0.24em] text-neutral-500">

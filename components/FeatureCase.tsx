@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CASES } from '@/lib/cases';
+import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 export function FeatureCase() {
   const c = CASES[0];
@@ -13,7 +14,7 @@ export function FeatureCase() {
               className="ff-mono font-medium tracking-[-0.02em] leading-[0.85] text-[28vw] md:text-[280px] absolute -top-10 -left-4 select-none pointer-events-none"
               style={{ color: '#D63B27', opacity: 0.1 }}
             >
-              FE.001
+              {c.no}
             </div>
             {c.imagePath ? (
               <div className="aspect-[5/4] w-full relative overflow-hidden">
@@ -27,13 +28,7 @@ export function FeatureCase() {
                 />
               </div>
             ) : (
-              <div className="aspect-[5/4] w-full relative" style={{ backgroundColor: '#D63B27' }}>
-                <div className="absolute inset-0 flex items-end p-5">
-                  <figcaption className="ff-mono text-[10.5px] uppercase tracking-[0.22em] text-white opacity-85">
-                    {c.caption}
-                  </figcaption>
-                </div>
-              </div>
+              <ImagePlaceholder bg={c.bg} caption={c.caption} ratio="aspect-[5/4]" />
             )}
           </div>
           <div className="col-span-12 md:col-span-5">

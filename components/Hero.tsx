@@ -29,9 +29,10 @@ export function Hero() {
             </div>
           </aside>
 
-          {/* Headline */}
+          {/* Headline — FIX 1: reduced ~17% from 180px→150px to fit within ~90vh on 1440×900.
+               FIX 2: leading-[0.92] (was 0.90) gives descenders of "moving" clearance above "New York." */}
           <div className="col-span-12 md:col-span-9 order-1 md:order-2 overflow-hidden">
-            <h1 className="ff-fraunces font-black leading-[0.9] tracking-[-0.045em] text-[68px] sm:text-[96px] md:text-[160px] lg:text-[180px]">
+            <h1 className="ff-fraunces font-black leading-[0.92] tracking-[-0.045em] text-[52px] sm:text-[78px] md:text-[132px] lg:text-[150px]">
               We build digital products for the people{' '}
               <em
                 className="not-italic"
@@ -76,8 +77,9 @@ export function Hero() {
               Currently accepting 3 projects · Q3 2026
             </div>
           </div>
+          {/* FIX 8: enlarged from 140px→220px so it reads as a proper magazine issue-number moment */}
           <div
-            className="hidden md:flex col-span-12 md:col-span-2 ff-fraunces text-[140px] leading-[0.8] font-black tracking-[-0.05em] justify-end items-end overflow-hidden"
+            className="hidden md:flex col-span-12 md:col-span-2 ff-fraunces text-[220px] leading-[0.8] font-black tracking-[-0.05em] justify-end items-end"
             style={{ color: '#1F2D5C' }}
           >
             '26

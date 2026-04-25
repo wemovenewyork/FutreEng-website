@@ -28,7 +28,9 @@ const SERVICES = [
 export function Services() {
   return (
     <div className="border-t-[2px] border-ink bg-cream">
-      <div className="max-w-[1440px] mx-auto px-8 md:px-10 py-16 md:py-24">
+      {/* FIX 7: Approach B — increased section padding (py-24→py-32 on desktop) and card gap
+           (gap-y-10→gap-y-16) to reduce density and let the section breathe between Work and Studio */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-10 py-20 md:py-32">
         <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-4 text-red">
           Section II — What we do
         </div>
@@ -38,9 +40,9 @@ export function Services() {
             done well.
           </em>
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
           {SERVICES.map((s) => (
-            <div key={s.n} className="border-t-[2px] border-ink pt-6">
+            <div key={s.n} className="border-t-[2px] border-ink pt-8">
               <div className="flex items-baseline justify-between">
                 <div className="ff-mono text-[12px] uppercase tracking-[0.24em] text-red">{s.n}</div>
                 <div className="ff-mono text-[10.5px] uppercase tracking-[0.22em] text-neutral-500">Service</div>

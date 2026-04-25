@@ -45,11 +45,13 @@ export function Studio() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
           {FOUNDERS.map((p, i) => (
             <div key={i}>
+              {/* solid={true}: these are deliberate brand-color blocks, not missing-photo placeholders */}
               <ImagePlaceholder
                 bg={p.bg}
                 caption={`Portrait — ${p.name}, ${p.role.split(' · ')[1]}`}
                 ratio="aspect-[4/5]"
                 monoColor="#F2EDE4"
+                solid
               />
               <div className="mt-6 ff-mono text-[10.5px] uppercase tracking-[0.28em] text-red">{p.role}</div>
               <h4 className="ff-fraunces mt-2 font-black tracking-[-0.025em] leading-[1] text-[40px] md:text-[52px]">
