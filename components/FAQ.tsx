@@ -1,0 +1,81 @@
+'use client';
+
+import { useState } from 'react';
+import { FullRule } from '@/components/ui/FullRule';
+
+const ITEMS = [
+  {
+    q: 'Who do you build for?',
+    a: "Community organizations, labor unions, transit-adjacent operators, and small NYC/NJ businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.",
+  },
+  {
+    q: 'What does an engagement cost?',
+    a: "A typical site or app runs $35–80K, eight weeks. Heritage and platform work runs longer. We send a written proposal after our first conversation. No retainer required, but most clients keep us on quarterly.",
+  },
+  {
+    q: 'How are you different from an agency?',
+    a: "There are two of us. Both founders work on every project, every day. We don't sell hours, we sell finished work. We don't use templates. We don't sub work out.",
+  },
+  {
+    q: 'Do you take on early-stage tech startups?',
+    a: "Rarely. We're the wrong studio for venture-backed product MVPs. We're the right studio for organizations who already have a job and need software that respects it.",
+  },
+  {
+    q: 'Can we keep working with you after launch?',
+    a: "Yes. Most of our clients do. We offer a quarterly retainer for ongoing design + engineering, scoped to the actual work in front of us.",
+  },
+];
+
+export function FAQ() {
+  const [open, setOpen] = useState<number>(0);
+  return (
+    <div className="border-t-[2px] border-ink bg-cream">
+      <FullRule />
+      <div className="max-w-[1440px] mx-auto px-8 md:px-10 py-16 md:py-24">
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 md:col-span-4">
+            <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-4 text-red">
+              Section VII — FAQ
+            </div>
+            <h2 className="ff-fraunces font-black tracking-[-0.025em] leading-[0.94] text-[44px] md:text-[72px]">
+              Common{' '}
+              <em className="italic" style={{ color: '#1F2D5C' }}>
+                questions.
+              </em>
+            </h2>
+          </div>
+          <div className="col-span-12 md:col-span-8">
+            <ul className="border-t-[2px] border-ink">
+              {ITEMS.map((it, i) => (
+                <li key={i} className="border-b" style={{ borderColor: '#1A171533' }}>
+                  <button
+                    onClick={() => setOpen(open === i ? -1 : i)}
+                    className="w-full grid grid-cols-12 gap-4 py-5 text-left items-baseline"
+                  >
+                    <div className="col-span-1 ff-mono text-[10.5px] uppercase tracking-[0.24em] text-red">
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <div className="col-span-10 ff-fraunces text-[22px] md:text-[28px] font-black tracking-[-0.015em] leading-[1.15]">
+                      {it.q}
+                    </div>
+                    <div className="col-span-1 text-right ff-mono text-[18px] text-red">
+                      {open === i ? '−' : '+'}
+                    </div>
+                  </button>
+                  {open === i && (
+                    <div className="grid grid-cols-12 gap-4 pb-7">
+                      <div className="hidden md:block md:col-span-1" />
+                      <p className="col-span-12 md:col-span-10 text-[15.5px] leading-[1.7] text-neutral-700">
+                        {it.a}
+                      </p>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

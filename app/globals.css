@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #F2EDE4;
+  --ink: #1A1715;
+  --red: #D63B27;
+  --blue: #1F2D5C;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: #F2EDE4;
+  --color-ink: #1A1715;
+  --color-red: #D63B27;
+  --color-blue: #1F2D5C;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #F2EDE4;
+  color: #1A1715;
+}
+
+.ff-fraunces {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+  font-feature-settings: "ss01", "liga", "dlig";
+}
+
+.ff-archivo {
+  font-family: var(--font-archivo), 'Helvetica Neue', sans-serif;
+  font-stretch: 75%;
+}
+
+.ff-mono {
+  font-family: var(--font-plex), ui-monospace, monospace;
+}
+
+.ticker-track {
+  animation: ticker 60s linear infinite;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
