@@ -26,6 +26,7 @@ const FOUNDERS = [
     bg: '#D63B27',
     bio: [
       '30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio\'s relationship with the people doing real work in the city.',
+      "Hands-on across the stack alongside Joseph — front-end work, content systems, and the production-side details that turn a design into a live site. Brings the client's perspective to every project: what actually breaks on the ground, what users will and won't use, and how technology lands inside organizations that have run for decades without it.",
     ],
     quote: '"The next generation of transformative technology companies will come from understanding industries deeply and building solutions from the inside out."',
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com', 'We Move New York'],
@@ -35,12 +36,11 @@ const FOUNDERS = [
     role: 'Co-founder · CTO',
     bg: '#1F2D5C',
     bio: [
-      'Joseph Pannetta brings deep expertise across the full software development lifecycle — from system architecture and backend engineering to UX design and cloud deployment.',
-      'He focuses on building technology at the intersection of AI, automation, and software platforms that enable businesses to operate more intelligently.',
-      'At FutreEng, Joseph writes the production code, maintains the technical bench, and ensures every system shipped is built to last.',
+      "Engineering lead. Builds production software, maintains the studio's technical bench, and writes most of the code that ends up in front of users.",
+      "Works across the full stack: React, Next.js, and Astro on the front end; Node, Python, and Postgres on the back end; Vercel, AWS, and edge infrastructure for deployment. Builds AI-augmented systems and integrations against the Anthropic and OpenAI APIs. Specializes in PWAs that work offline and in low-signal environments — the kind of software that has to keep running when the network doesn't.",
     ],
     quote: '"Build companies that leverage advanced software and intelligent systems to reshape how businesses operate."',
-    meta: ['Jersey City, NJ', 'JosephPannetta@futreeng.com', 'System Architecture', 'AI & Automation'],
+    meta: ['Akron, OH', 'JosephPannetta@futreeng.com', 'System Architecture', 'AI & Automation'],
   },
 ];
 

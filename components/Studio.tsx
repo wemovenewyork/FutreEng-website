@@ -6,15 +6,21 @@ const FOUNDERS = [
     name: 'Haron Wilson',
     role: 'Co-founder · CEO',
     bg: '#D63B27',
-    copy: "30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
+    copy: [
+      "30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
+      "Hands-on across the stack alongside Joseph — front-end work, content systems, and the production-side details that turn a design into a live site. Brings the client's perspective to every project: what actually breaks on the ground, what users will and won't use, and how technology lands inside organizations that have run for decades without it.",
+    ],
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com'],
   },
   {
     name: 'Joseph Pannetta',
     role: 'Co-founder · CTO',
     bg: '#1F2D5C',
-    copy: "Engineering lead. Builds production software, maintains the studio's technical bench, and writes most of the code that ends up in front of users.",
-    meta: ['Jersey City, NJ', 'JosephPannetta@futreeng.com'],
+    copy: [
+      "Engineering lead. Builds production software, maintains the studio's technical bench, and writes most of the code that ends up in front of users.",
+      "Works across the full stack: React, Next.js, and Astro on the front end; Node, Python, and Postgres on the back end; Vercel, AWS, and edge infrastructure for deployment. Builds AI-augmented systems and integrations against the Anthropic and OpenAI APIs. Specializes in PWAs that work offline and in low-signal environments — the kind of software that has to keep running when the network doesn't.",
+    ],
+    meta: ['Akron, OH', 'JosephPannetta@futreeng.com'],
   },
 ];
 
@@ -57,7 +63,9 @@ export function Studio() {
               <h4 className="ff-fraunces mt-2 font-black tracking-[-0.025em] leading-[1] text-[40px] md:text-[52px]">
                 {p.name}
               </h4>
-              <p className="mt-4 text-[15.5px] leading-[1.65] max-w-[44ch]">{p.copy}</p>
+              {p.copy.map((para, j) => (
+                <p key={j} className="mt-4 text-[15.5px] leading-[1.65] max-w-[44ch]">{para}</p>
+              ))}
               <div className="mt-5 flex flex-wrap gap-3 ff-mono text-[10.5px] uppercase tracking-[0.22em]" style={{ color: '#F2EDE499' }}>
                 {p.meta.map((m, j) => (
                   <span key={j} className="border px-3 py-1.5" style={{ borderColor: '#F2EDE455' }}>
