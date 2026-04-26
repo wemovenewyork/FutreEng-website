@@ -4,12 +4,75 @@ import { FullRule } from '@/components/ui/FullRule';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Book a 30-minute conversation with FutreEng. We reply within two business days.',
+  description:
+    'A 30-minute conversation. No deck. Just you, us, and the actual job in front of you. We reply within two business days.',
+  openGraph: {
+    title: 'Contact — FutreEng',
+    description:
+      'A 30-minute conversation. No deck. Just you, us, and the actual job in front of you. We reply within two business days.',
+    url: 'https://futreeng.com/contact',
+  },
+  twitter: {
+    title: 'Contact — FutreEng',
+    description:
+      'A 30-minute conversation. No deck. Just you, us, and the actual job in front of you. We reply within two business days.',
+  },
+};
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who do you build for?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Community organizations, labor unions, transit-adjacent operators, and small NYC/NJ businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does an engagement cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A typical site or app runs $35–80K, eight weeks. Heritage and platform work runs longer. We send a written proposal after our first conversation. No retainer required, but most clients keep us on quarterly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How are you different from an agency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "There are two of us. Both founders work on every project, every day. We don't sell hours, we sell finished work. We don't use templates. We don't sub work out.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you take on early-stage tech startups?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Rarely. We're the wrong studio for venture-backed product MVPs. We're the right studio for organizations who already have a job and need software that respects it.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can we keep working with you after launch?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Most of our clients do. We offer a quarterly retainer for ongoing design + engineering, scoped to the actual work in front of us.',
+      },
+    },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <FullRule />
       <div className="max-w-[1440px] mx-auto px-8 md:px-10 pt-16 md:pt-24 pb-10">
         <div className="ff-mono text-[11px] uppercase tracking-[0.3em] mb-4 text-red">
@@ -35,7 +98,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
             {[
               { n: '01', title: 'We read your message', body: 'Both of us. Within two business days we write back with a short response and, if it seems like a fit, a proposed call time.' },
-              { n: '02', title: '30-minute conversation', body: 'No deck. No questionnaire. We talk about the actual job in front of you and whether we\'re the right studio for it.' },
+              { n: '02', title: '30-minute conversation', body: "No deck. No questionnaire. We talk about the actual job in front of you and whether we're the right studio for it." },
               { n: '03', title: 'Written proposal', body: 'If we think we can help, we send a written proposal within one week. Scope, timeline, and cost — clearly stated.' },
             ].map((s) => (
               <div key={s.n} className="border-t-[2px] border-ink pt-5">

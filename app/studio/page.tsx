@@ -4,7 +4,19 @@ import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 export const metadata: Metadata = {
   title: 'Studio',
-  description: 'FutreEng is Joseph Pannetta and Haron Wilson — a boutique software studio for the people moving New York.',
+  description:
+    'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+  openGraph: {
+    title: 'Studio — FutreEng',
+    description:
+      'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+    url: 'https://futreeng.com/studio',
+  },
+  twitter: {
+    title: 'Studio — FutreEng',
+    description:
+      'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+  },
 };
 
 const FOUNDERS = [

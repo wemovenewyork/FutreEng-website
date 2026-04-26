@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#F2EDE4"/>
+  <!-- F — vertical stem -->
+  <rect x="65" y="96" width="58" height="320" fill="#1A1715"/>
+  <!-- F — top crossbar -->
+  <rect x="65" y="96" width="220" height="55" fill="#1A1715"/>
+  <!-- F — middle crossbar -->
+  <rect x="65" y="229" width="178" height="55" fill="#1A1715"/>
+  <!-- E — vertical stem -->
+  <rect x="289" y="96" width="58" height="320" fill="#1A1715"/>
+  <!-- E — top crossbar -->
+  <rect x="289" y="96" width="158" height="55" fill="#1A1715"/>
+  <!-- E — middle crossbar -->
+  <rect x="289" y="229" width="130" height="55" fill="#1A1715"/>
+  <!-- E — bottom crossbar -->
+  <rect x="289" y="362" width="158" height="54" fill="#1A1715"/>
+  <!-- Red period — bottom right, echoing nav wordmark -->
+  <circle cx="460" cy="455" r="44" fill="#D63B27"/>
+</svg>

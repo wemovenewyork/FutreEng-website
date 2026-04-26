@@ -5,7 +5,16 @@ import { POSTS } from '@/lib/journal';
 
 export const metadata: Metadata = {
   title: 'Journal',
-  description: 'Field notes, process writing, and case studies from FutreEng.',
+  description: 'Field notes from the studio. Writing on software, design, and the work itself.',
+  openGraph: {
+    title: 'Journal — FutreEng',
+    description: 'Field notes from the studio. Writing on software, design, and the work itself.',
+    url: 'https://futreeng.com/journal',
+  },
+  twitter: {
+    title: 'Journal — FutreEng',
+    description: 'Field notes from the studio. Writing on software, design, and the work itself.',
+  },
 };
 
 export default function JournalPage() {

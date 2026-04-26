@@ -1,0 +1,23 @@
+{
+  "name": "FutreEng",
+  "short_name": "FutreEng",
+  "description": "A boutique software studio in New York. Web apps, PWAs, and bespoke software for community organizations, labor groups, and operators.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2EDE4",
+  "theme_color": "#F2EDE4",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

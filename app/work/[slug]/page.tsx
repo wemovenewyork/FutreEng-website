@@ -19,8 +19,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getCaseBySlug(slug);
   if (!c) return {};
   return {
-    title: `${c.title} ${c.italicWord}`,
+    title: `${c.title} — ${c.no}`,
     description: c.desc,
+    openGraph: {
+      title: `${c.title} — ${c.no} — FutreEng`,
+      description: c.desc,
+      url: `https://futreeng.com/work/${c.slug}`,
+    },
+    twitter: {
+      title: `${c.title} — ${c.no} — FutreEng`,
+      description: c.desc,
+    },
   };
 }
 
@@ -32,8 +41,22 @@ export default async function CaseStudyPage({ params }: Props) {
   const currentIndex = CASES.findIndex((x) => x.slug === slug);
   const next = CASES[currentIndex + 1] ?? CASES[0];
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: `${c.title} ${c.italicWord}`,
+    creator: { '@type': 'Organization', name: 'FutreEng' },
+    datePublished: c.year,
+    description: c.desc,
+    url: `https://futreeng.com/work/${c.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <FullRule />
       {/* Hero */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-10 pt-16 md:pt-24 pb-10">

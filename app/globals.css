@@ -36,6 +36,7 @@ body {
   font-family: var(--font-plex), ui-monospace, monospace;
 }
 
+/* ─── Ticker animation ─── */
 .ticker-track {
   animation: ticker 60s linear infinite;
 }
@@ -43,4 +44,46 @@ body {
 @keyframes ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* ─── Skeleton shimmer ─── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #ede7de 0%,
+    #f6f1eb 50%,
+    #ede7de 100%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  /* Pause ticker — show static, non-scrolling content */
+  .ticker-track {
+    animation: none;
+    transform: translateX(0) !important;
+  }
+
+  /* Pause skeleton shimmer — show solid placeholder */
+  .skeleton {
+    animation: none;
+    background: #ede7de;
+  }
+
+  /* Suppress all transitions and other keyframe animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

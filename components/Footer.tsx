@@ -11,6 +11,27 @@ const LINKS = [
   { label: 'Contact', href: '/contact' },
 ];
 
+const LEGAL_LINKS = [
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
+  { label: 'Accessibility', href: '/accessibility' },
+];
+
+function ManageCookies() {
+  function reset() {
+    localStorage.removeItem('futreeng_banner_dismissed');
+    window.location.reload();
+  }
+  return (
+    <button
+      onClick={reset}
+      className="hover:text-red transition-colors"
+    >
+      Cookie preferences
+    </button>
+  );
+}
+
 export function Footer() {
   const [email, setEmail] = useState('');
   const [subbed, setSubbed] = useState(false);
@@ -26,8 +47,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 grid grid-cols-12 gap-8 border-t-[2px] border-ink pt-10">
-          <div className="col-span-12 md:col-span-6">
-            <div className="ff-archivo uppercase font-bold text-[20px] md:text-[26px] tracking-[-0.01em] max-w-[24ch] leading-[1.15]">
+          <div className="col-span-12 md:col-span-4">
+            <div className="ff-archivo uppercase font-bold text-[18px] md:text-[22px] tracking-[-0.01em] max-w-[24ch] leading-[1.15]">
               A boutique software studio for the people moving New York.
             </div>
             <div className="mt-5 ff-mono text-[12px] uppercase tracking-[0.24em]">
@@ -41,6 +62,21 @@ export function Footer() {
             </div>
             <ul className="ff-mono uppercase text-[12px] tracking-[0.22em] leading-[2.1]">
               {LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-red transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="col-span-6 md:col-span-2">
+            <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-4" style={{ color: '#D63B27' }}>
+              Legal
+            </div>
+            <ul className="ff-mono uppercase text-[12px] tracking-[0.22em] leading-[2.1]">
+              {LEGAL_LINKS.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="hover:text-red transition-colors">
                     {l.label}
@@ -74,10 +110,9 @@ export function Footer() {
               </div>
             ) : (
               <div className="ff-mono text-[10.5px] uppercase tracking-[0.22em]" style={{ color: '#D63B27' }}>
-                You're in. Talk soon.
+                You&apos;re in. Talk soon.
               </div>
             )}
-            {/* TODO: wire to Resend / ConvertKit / Mailchimp */}
           </div>
         </div>
 
@@ -85,7 +120,10 @@ export function Footer() {
           className="mt-12 pt-5 border-t-[2px] border-ink flex flex-col md:flex-row justify-between gap-3 ff-mono text-[10.5px] uppercase tracking-[0.24em]"
         >
           <div>© 2026 FutreEng. All rights reserved.</div>
-          <div>Typeset in Fraunces & Archivo Condensed / Built in New York / Issue 01 · Q3 2026</div>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-neutral-500">
+            <span>Typeset in Fraunces & Archivo Condensed / Built in New York / Issue 01 · Q3 2026</span>
+            <ManageCookies />
+          </div>
         </div>
       </div>
     </footer>

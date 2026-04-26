@@ -5,8 +5,20 @@ import { CaseCard } from '@/components/CaseCard';
 import { CASES } from '@/lib/cases';
 
 export const metadata: Metadata = {
-  title: 'Work',
-  description: 'Selected projects from FutreEng — web apps, PWAs, and bespoke software shipped across NYC and NJ.',
+  title: 'Selected Work',
+  description:
+    'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+  openGraph: {
+    title: 'Selected Work — FutreEng',
+    description:
+      'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+    url: 'https://futreeng.com/work',
+  },
+  twitter: {
+    title: 'Selected Work — FutreEng',
+    description:
+      'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+  },
 };
 
 export default function WorkPage() {

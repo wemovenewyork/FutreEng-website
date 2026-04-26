@@ -16,9 +16,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const description = post.dek ?? post.body[0]?.slice(0, 160);
   return {
-    title: post.title,
-    description: post.dek,
+    title: { absolute: `${post.title} — FutreEng Journal` },
+    description,
+    openGraph: {
+      title: `${post.title} — FutreEng Journal`,
+      description,
+      url: `https://futreeng.com/journal/${post.slug}`,
+      type: 'article',
+    },
+    twitter: {
+      title: `${post.title} — FutreEng Journal`,
+      description,
+    },
   };
 }
 
@@ -30,8 +41,30 @@ export default async function JournalPostPage({ params }: Props) {
   const currentIndex = POSTS.findIndex((p) => p.slug === slug);
   const next = POSTS[currentIndex + 1];
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    datePublished: post.date,
+    description: post.dek ?? post.body[0],
+    author: { '@type': 'Organization', name: 'FutreEng Studio' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FutreEng',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://futreeng.com/opengraph-image',
+      },
+    },
+    url: `https://futreeng.com/journal/${post.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <FullRule />
       {/* Header */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-10 pt-16 md:pt-24 pb-10">
@@ -61,9 +94,6 @@ export default async function JournalPostPage({ params }: Props) {
                 <p
                   key={i}
                   className="text-[17px] md:text-[19px] leading-[1.75] text-neutral-800 mb-7"
-                  style={i === 0 ? {
-                    fontSize: undefined,
-                  } : {}}
                 >
                   {paragraph}
                 </p>
