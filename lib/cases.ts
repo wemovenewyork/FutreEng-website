@@ -81,14 +81,14 @@ export const CASES: CaseStudy[] = [
   },
   {
     // FIX 6: Tramell Thompson is FE.002 in canonical order
-    slug: 'fe-003-tramell-thompson',
+    slug: 'fe-002-tramell-thompson',
     no: 'FE.002',
-    cat: 'Labor · TWU Local 100',
+    cat: 'Labor · Progressive Action',
     year: '2025',
     title: 'Tramell Thompson',
     italicWord: 'Field Notes',
     tagType: 'subtitle',
-    desc: 'A personal site and field-organizing publication for the Local 100 organizer and writer — built for fast, low-bandwidth posting from the field.',
+    desc: 'A personal site and field-organizing publication for the labor organizer and writer — built for fast, low-bandwidth posting from the field.',
     duration: '6 weeks',
     stack: 'Astro · MDX · Vercel',
     role: 'Design + Eng',
@@ -97,7 +97,7 @@ export const CASES: CaseStudy[] = [
     imagePath: '/images/tramell.jpg',
     featured: false,
     brief: [
-      'Tramell Thompson is a labor organizer and writer with TWU Local 100. He needed a personal site that could double as a publishing platform — something he could post to from a phone at a picket line.',
+      'Tramell Thompson is a labor organizer, writer, and founder of Progressive Action. He needed a personal site that could double as a publishing platform — something he could post to from a phone at a picket line.',
       'We built a static-first site on Astro with MDX for posts, optimized for low-bandwidth environments. The editorial aesthetic mirrors the seriousness of the work.',
     ],
     outcome: [
@@ -107,13 +107,13 @@ export const CASES: CaseStudy[] = [
     ],
     quote: {
       text: 'Everything feels connected and premium. They gave our brand a real digital identity.',
-      attribution: 'Tramell Thompson, TWU Local 100',
+      attribution: 'Tramell Thompson, Progressive Action',
     },
   },
   {
     // FIX 6: Low.Key Studios is FE.003 in canonical order
     // FIX 9: version label corrected to "v.2" (was "v2")
-    slug: 'fe-005-lowkey-studios',
+    slug: 'fe-003-lowkey-studios',
     no: 'FE.003',
     cat: 'Photography · Studio',
     year: '2025',
@@ -145,7 +145,7 @@ export const CASES: CaseStudy[] = [
   {
     // FIX 6: PHAmily Classic is FE.010 in canonical order
     // FIX 9: "shipped" is a status label (delivery state), not a subtitle
-    slug: 'fe-004-phamily-classic',
+    slug: 'fe-010-phamily-classic',
     no: 'FE.010',
     cat: 'Community Event',
     year: '2025',
@@ -176,7 +176,7 @@ export const CASES: CaseStudy[] = [
   },
   {
     // FIX 6: WMNY Depot Check-In is FE.013 in canonical order (in build)
-    slug: 'fe-002-we-move-new-york',
+    slug: 'fe-013-we-move-new-york',
     no: 'FE.013',
     cat: 'Transit · Labor',
     year: '2026',

@@ -98,7 +98,7 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
                 We&apos;ll write back within two business days.
               </p>
               <div className="mt-10 ff-mono text-[11px] uppercase tracking-[0.24em] leading-[2.1]" style={{ color: '#F2EDE4AA' }}>
-                <div><span className="text-red">Email — </span>hello@futreng.com</div>
+                <div><span className="text-red">Email — </span>hello@futreeng.com</div>
                 <div><span className="text-red">Studio — </span>NYC + NJ, by appointment</div>
                 <div><span className="text-red">Hours — </span>Mon–Thu, 9–6 ET</div>
                 <div><span className="text-red">Reply — </span>Within two business days</div>
@@ -149,7 +149,7 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
                 </div>
                 <p className="mt-5 text-[16px] leading-[1.65] max-w-[44ch]" style={{ color: '#F2EDE4DD' }}>
                   We&apos;ll write back to {data.email || 'you'} within two business days. If it&apos;s urgent,
-                  hello@futreng.com lands in both our inboxes.
+                  hello@futreeng.com lands in both our inboxes.
                 </p>
               </div>
             )}

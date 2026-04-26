@@ -18,7 +18,7 @@ const FOUNDERS = [
       'At FutreEng, Haron runs client relationships, strategy, and the studio\'s work with labor organizations and community groups across the city.',
     ],
     quote: '"The next generation of transformative technology companies will come from understanding industries deeply and building solutions from the inside out."',
-    meta: ['Brooklyn, NY', 'haron@futreng.com', 'TWU Local 100', 'We Move New York'],
+    meta: ['Brooklyn, NY', 'haron@futreeng.com', 'TWU Local 100', 'We Move New York'],
   },
   {
     name: 'Joseph Pannetta',
@@ -30,7 +30,7 @@ const FOUNDERS = [
       'At FutreEng, Joseph writes the production code, maintains the technical bench, and ensures every system shipped is built to last.',
     ],
     quote: '"Build companies that leverage advanced software and intelligent systems to reshape how businesses operate."',
-    meta: ['Jersey City, NJ', 'joseph@futreng.com', 'System Architecture', 'AI & Automation'],
+    meta: ['Jersey City, NJ', 'joseph@futreeng.com', 'System Architecture', 'AI & Automation'],
   },
 ];
 

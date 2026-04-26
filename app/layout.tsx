@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://futreng.com'),
+  metadataBase: new URL('https://futreeng.com'),
   title: {
     default: 'FutreEng — A Software Studio in New York',
     template: '%s — FutreEng',

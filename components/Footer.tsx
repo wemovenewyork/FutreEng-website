@@ -31,7 +31,7 @@ export function Footer() {
               A boutique software studio for the people moving New York.
             </div>
             <div className="mt-5 ff-mono text-[12px] uppercase tracking-[0.24em]">
-              NYC / NJ · hello@futreng.com
+              NYC / NJ · hello@futreeng.com
             </div>
           </div>
 

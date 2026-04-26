@@ -3,7 +3,7 @@ import { CASES } from '@/lib/cases';
 import { POSTS } from '@/lib/journal';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://futreng.com';
+  const base = 'https://futreeng.com';
 
   const staticRoutes = ['', '/work', '/journal', '/studio', '/contact'].map((path) => ({
     url: `${base}${path}`,
