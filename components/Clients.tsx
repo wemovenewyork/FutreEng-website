@@ -1,6 +1,5 @@
 const CLIENTS = [
   'We Move New York',
-  'TWU Local 100',
   'Adelphic Union Lodge No. 14',
   'Tramell Thompson',
   'PHAmily Classic',

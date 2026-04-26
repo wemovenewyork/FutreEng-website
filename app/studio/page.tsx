@@ -25,12 +25,10 @@ const FOUNDERS = [
     role: 'Co-founder · CEO',
     bg: '#D63B27',
     bio: [
-      'Haron Wilson is an entrepreneur focused on transforming traditional industries through technology, community, and bold thinking.',
-      'With 30+ years in public transportation, he founded We Move New York — the largest brand for transportation professionals in the NYC metro area — and the WMNY Invitational, the largest sporting event for transportation employees.',
-      'At FutreEng, Haron runs client relationships, strategy, and the studio\'s work with labor organizations and community groups across the city.',
+      '30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio\'s relationship with the people doing real work in the city.',
     ],
     quote: '"The next generation of transformative technology companies will come from understanding industries deeply and building solutions from the inside out."',
-    meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com', 'TWU Local 100', 'We Move New York'],
+    meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com', 'We Move New York'],
   },
   {
     name: 'Joseph Pannetta',

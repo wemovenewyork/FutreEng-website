@@ -1,4 +1,4 @@
-// FIX 6: Single source of truth for all FutreEng projects, in canonical chronological order.
+// Single source of truth for all FutreEng projects, in canonical chronological order.
 // Adding a project is a one-place change: add to PROJECT_REGISTRY, then add full data to CASES
 // if it should be displayed on the site.
 export const PROJECT_REGISTRY = [
@@ -8,17 +8,16 @@ export const PROJECT_REGISTRY = [
   { no: 'FE.004', title: 'RideWithLease', status: 'shipped' },
   { no: 'FE.005', title: 'By Lolita With Love', status: 'shipped' },
   { no: 'FE.006', title: 'LaPara Barbershop', status: 'shipped' },
-  { no: 'FE.007', title: 'TWU Local 100 Prototype', status: 'shipped' },
-  { no: 'FE.008', title: 'WMNY Shift Swap', status: 'shipped' },
-  { no: 'FE.009', title: 'Talk It Out', status: 'shipped' },
-  { no: 'FE.010', title: 'PHAmily Classic', status: 'shipped' },
-  { no: 'FE.011', title: 'WMNY Social Media System', status: 'shipped' },
-  { no: 'FE.012', title: 'Blacktop JC', status: 'shipped' },
-  { no: 'FE.013', title: 'WMNY Depot Check-In', status: 'in build' },
-  { no: 'FE.014', title: 'campgiving.com', status: 'in design' },
+  { no: 'FE.007', title: 'WMNY Shift Swap', status: 'shipped' },
+  { no: 'FE.008', title: 'Talk It Out', status: 'shipped' },
+  { no: 'FE.009', title: 'PHAmily Classic', status: 'shipped' },
+  { no: 'FE.010', title: 'WMNY Social Media System', status: 'shipped' },
+  { no: 'FE.011', title: 'Blacktop JC', status: 'shipped' },
+  { no: 'FE.012', title: 'WMNY Depot Check-In', status: 'in build' },
+  { no: 'FE.013', title: 'campgiving.com', status: 'in design' },
 ] as const;
 
-// FIX 9: tagType drives italic-word color in cards.
+// tagType drives italic-word color in cards.
 //   'subtitle'  → descriptive name or series (rendered in blue, #1F2D5C)
 //   'status'    → delivery state: "in build", "in design", "shipped" (rendered in red, #D63B27)
 //   'version'   → iteration indicator: "v.2", "v.3" (rendered in red, #D63B27)
@@ -80,7 +79,6 @@ export const CASES: CaseStudy[] = [
     },
   },
   {
-    // FIX 6: Tramell Thompson is FE.002 in canonical order
     slug: 'fe-002-tramell-thompson',
     no: 'FE.002',
     cat: 'Labor · Progressive Action',
@@ -111,8 +109,6 @@ export const CASES: CaseStudy[] = [
     },
   },
   {
-    // FIX 6: Low.Key Studios is FE.003 in canonical order
-    // FIX 9: version label corrected to "v.2" (was "v2")
     slug: 'fe-003-lowkey-studios',
     no: 'FE.003',
     cat: 'Photography · Studio',
@@ -143,10 +139,9 @@ export const CASES: CaseStudy[] = [
     },
   },
   {
-    // FIX 6: PHAmily Classic is FE.010 in canonical order
-    // FIX 9: "shipped" is a status label (delivery state), not a subtitle
-    slug: 'fe-010-phamily-classic',
-    no: 'FE.010',
+    // Renumbered FE.010 → FE.009
+    slug: 'fe-009-phamily-classic',
+    no: 'FE.009',
     cat: 'Community Event',
     year: '2025',
     title: 'PHAmily Classic',
@@ -175,15 +170,15 @@ export const CASES: CaseStudy[] = [
     },
   },
   {
-    // FIX 6: WMNY Depot Check-In is FE.013 in canonical order (in build)
-    slug: 'fe-013-we-move-new-york',
-    no: 'FE.013',
+    // Renumbered FE.013 → FE.012
+    slug: 'fe-012-we-move-new-york',
+    no: 'FE.012',
     cat: 'Transit · Labor',
     year: '2026',
     title: 'We Move New York',
     italicWord: 'Depot Check-In',
     tagType: 'subtitle',
-    desc: 'A progressive web app for transit workers — depot check-in, shift tools, and union notices that work on subway-tunnel signal.',
+    desc: 'A progressive web app for transit workers — depot check-in, shift tools, and operator notices that work on subway-tunnel signal.',
     duration: '12 weeks',
     stack: 'PWA · React · IndexedDB',
     role: 'Design + Eng',
@@ -192,7 +187,7 @@ export const CASES: CaseStudy[] = [
     featured: false,
     brief: [
       'Transit workers operate in environments where connectivity is unreliable — underground stations, tunnels, and depots with patchy Wi-Fi. We Move New York needed a tool that worked offline first.',
-      'We built a progressive web app with local IndexedDB storage, syncing when signal returned. Depot check-in, shift swap requests, and union notice boards all function without a connection.',
+      'We built a progressive web app with local IndexedDB storage, syncing when signal returned. Depot check-in, shift swap requests, and operator notice boards all function without a connection.',
     ],
     outcome: [
       { n: '12wk', label: 'Kickoff to launch' },

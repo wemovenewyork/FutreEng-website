@@ -19,7 +19,7 @@ export function Hero() {
           <aside className="col-span-12 md:col-span-3 md:pt-3 order-2 md:order-1">
             <div className="border-t-[2px] border-ink pt-4 ff-mono text-[10.5px] uppercase tracking-[0.22em] leading-[2]">
               <div className="text-neutral-500">Established</div>
-              <div className="mb-3">2024</div>
+              <div className="mb-3">2026</div>
               <div className="text-neutral-500">Based in</div>
               <div className="mb-3">NYC + NJ</div>
               <div className="text-neutral-500">Studio of</div>

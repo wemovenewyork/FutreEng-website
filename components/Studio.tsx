@@ -6,7 +6,7 @@ const FOUNDERS = [
     name: 'Haron Wilson',
     role: 'Co-founder · CEO',
     bg: '#D63B27',
-    copy: "Comes from the organizer side — TWU Local 100, We Move New York. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
+    copy: "30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com'],
   },
   {
