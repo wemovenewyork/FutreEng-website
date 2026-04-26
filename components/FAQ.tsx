@@ -27,7 +27,16 @@ const ITEMS = [
 ];
 
 export function FAQ() {
-  const [open, setOpen] = useState<number>(0);
+  const [open, setOpen] = useState<Set<number>>(new Set([0]));
+
+  const toggle = (i: number) => {
+    setOpen(prev => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i); else next.add(i);
+      return next;
+    });
+  };
+
   return (
     <div className="border-t-[2px] border-ink bg-cream">
       <FullRule />
@@ -49,7 +58,8 @@ export function FAQ() {
               {ITEMS.map((it, i) => (
                 <li key={i} className="border-b" style={{ borderColor: '#1A171533' }}>
                   <button
-                    onClick={() => setOpen(open === i ? -1 : i)}
+                    onClick={() => toggle(i)}
+                    aria-expanded={open.has(i)}
                     className="w-full grid grid-cols-12 gap-4 py-5 text-left items-baseline"
                   >
                     <div className="col-span-1 ff-mono text-[10.5px] uppercase tracking-[0.24em] text-red">
@@ -59,17 +69,32 @@ export function FAQ() {
                       {it.q}
                     </div>
                     <div className="col-span-1 text-right ff-mono text-[18px] text-red">
-                      {open === i ? '−' : '+'}
+                      {open.has(i) ? '−' : '+'}
                     </div>
                   </button>
-                  {open === i && (
-                    <div className="grid grid-cols-12 gap-4 pb-7">
-                      <div className="hidden md:block md:col-span-1" />
-                      <p className="col-span-12 md:col-span-10 text-[15.5px] leading-[1.7] text-neutral-700">
-                        {it.a}
-                      </p>
+                  {/* Height transition via grid-template-rows 0fr→1fr */}
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateRows: open.has(i) ? '1fr' : '0fr',
+                      transition: 'grid-template-rows 300ms ease-out',
+                    }}
+                  >
+                    <div style={{ overflow: 'hidden' }}>
+                      <div className="grid grid-cols-12 gap-4 pb-7">
+                        <div className="hidden md:block md:col-span-1" />
+                        <p
+                          className="col-span-12 md:col-span-10 text-[15.5px] leading-[1.7] text-neutral-700"
+                          style={{
+                            opacity: open.has(i) ? 1 : 0,
+                            transition: 'opacity 200ms ease-out 100ms',
+                          }}
+                        >
+                          {it.a}
+                        </p>
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </li>
               ))}
             </ul>

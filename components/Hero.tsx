@@ -33,18 +33,22 @@ export function Hero() {
                FIX 2: leading-[0.92] (was 0.90) gives descenders of "moving" clearance above "New York." */}
           <div className="col-span-12 md:col-span-9 order-1 md:order-2 overflow-hidden">
             <h1 className="ff-fraunces font-black leading-[0.92] tracking-[-0.045em] text-[52px] sm:text-[78px] md:text-[132px] lg:text-[150px]">
-              We build digital products for the people{' '}
-              <em
-                className="not-italic"
-                style={{ position: 'relative', display: 'inline-block' }}
-              >
-                <span className="italic text-red">moving</span>
-                <span
-                  className="absolute left-0 right-0"
-                  style={{ bottom: '0.04em', height: '0.09em', backgroundColor: '#D63B27' }}
-                />
-              </em>{' '}
-              New York.
+              <span className="hero-line" style={{ animationDelay: '0ms' }}>We build</span>
+              <span className="hero-line" style={{ animationDelay: '80ms' }}>digital products</span>
+              <span className="hero-line" style={{ animationDelay: '160ms' }}>
+                for the people{' '}
+                <em
+                  className="not-italic"
+                  style={{ position: 'relative', display: 'inline-block' }}
+                >
+                  <span className="italic text-red">moving</span>
+                  <span
+                    className="absolute left-0 right-0"
+                    style={{ bottom: '0.04em', height: '0.09em', backgroundColor: '#D63B27' }}
+                  />
+                </em>
+              </span>
+              <span className="hero-line" style={{ animationDelay: '240ms' }}>New York.</span>
             </h1>
           </div>
         </div>

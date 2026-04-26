@@ -63,12 +63,48 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+/* ─── Motion 01: Hero line reveal ─── */
+@keyframes hero-line-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-line {
+  display: block;
+  animation: hero-line-reveal 500ms ease-out both;
+}
+
+/* ─── Motion 03: Contact form ─── */
+@keyframes btn-submitting-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.85; }
+}
+
+@keyframes btn-error-shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-4px); }
+  60%  { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes confirm-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   /* Pause ticker — show static, non-scrolling content */
   .ticker-track {
     animation: none;
     transform: translateX(0) !important;
+  }
+
+  /* Hero lines jump to final state — don't just play fast */
+  .hero-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   /* Pause skeleton shimmer — show solid placeholder */

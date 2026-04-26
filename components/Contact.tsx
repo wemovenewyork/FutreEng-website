@@ -6,6 +6,8 @@ import { FullRule } from '@/components/ui/FullRule';
 const SCOPE_OPTIONS = ['', 'Web app / PWA', 'Marketing / heritage site', 'Internal tools', 'Ongoing studio retainer', 'Not sure yet'];
 const BUDGET_OPTIONS = ['', 'Under $35K', '$35–80K', '$80–150K', '$150K+', 'Open'];
 
+type Status = 'idle' | 'submitting' | 'sent' | 'error';
+
 function Field({
   label, value, onChange, type = 'text', className = '',
 }: {
@@ -76,8 +78,27 @@ function Textarea({
 
 export function Contact({ sidebar = true }: { sidebar?: boolean }) {
   const [data, setData] = useState({ name: '', org: '', email: '', scope: '', budget: '', note: '' });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>('idle');
+  const [shakeKey, setShakeKey] = useState(0);
   const set = (k: keyof typeof data) => (v: string) => setData((d) => ({ ...d, [k]: v }));
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('submitting');
+    try {
+      // TODO: replace with real API call (Resend route or Formspree)
+      await new Promise<void>((resolve) => setTimeout(resolve, 1200));
+      setStatus('sent');
+    } catch {
+      setShakeKey(k => k + 1);
+      setStatus('error');
+    }
+  }
+
+  const btnAnimation =
+    status === 'submitting' ? 'btn-submitting-pulse 1s ease-in-out infinite' :
+    status === 'error'      ? 'btn-error-shake 200ms ease-out' :
+    undefined;
 
   return (
     <div id="contact" className="border-t-[2px] border-ink" style={{ backgroundColor: '#1A1715', color: '#F2EDE4' }}>
@@ -107,16 +128,35 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
           )}
 
           <div className={sidebar ? 'col-span-12 md:col-span-7' : ''}>
-            {!sent ? (
+            {status === 'sent' ? (
+              <div
+                className="border-[2px] p-10"
+                style={{
+                  borderColor: '#F2EDE4',
+                  animation: 'confirm-reveal 300ms ease-out both',
+                }}
+              >
+                <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-4 text-red">
+                  Confirmation — Form 01
+                </div>
+                <div className="ff-fraunces font-black tracking-[-0.025em] leading-[1] text-[40px] md:text-[56px]">
+                  Got it.{' '}
+                  <em className="italic text-red">Thank you.</em>
+                </div>
+                <p className="mt-5 text-[16px] leading-[1.65] max-w-[44ch]" style={{ color: '#F2EDE4DD' }}>
+                  We&apos;ll write back to {data.email || 'you'} within two business days. If it&apos;s urgent,
+                  hello@futreeng.com lands in both our inboxes.
+                </p>
+              </div>
+            ) : (
               <form
-                onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+                onSubmit={handleSubmit}
                 className="border-[2px] p-6 md:p-8"
                 style={{ borderColor: '#F2EDE4' }}
               >
                 <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-6 text-red">
                   Form 01 — Project enquiry
                 </div>
-                {/* TODO: wire to Resend API route or Formspree */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <Field label="Your name" value={data.name} onChange={set('name')} />
                   <Field label="Organization" value={data.org} onChange={set('org')} />
@@ -127,31 +167,30 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
                 </div>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <button
+                    key={`btn-${shakeKey}`}
                     type="submit"
-                    className="text-white px-7 py-4 ff-mono text-[12px] uppercase tracking-[0.24em] hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: '#D63B27' }}
+                    disabled={status === 'submitting'}
+                    className="text-white px-7 py-4 ff-mono text-[12px] uppercase tracking-[0.24em] hover:opacity-90 transition-opacity disabled:cursor-not-allowed"
+                    style={{
+                      backgroundColor: '#D63B27',
+                      animation: btnAnimation,
+                    }}
                   >
-                    Send enquiry →
+                    {status === 'submitting' ? 'Sending…' : 'Send enquiry →'}
                   </button>
                   <span className="ff-mono text-[10.5px] uppercase tracking-[0.22em]" style={{ color: '#F2EDE499' }}>
                     We reply within 2 business days.
                   </span>
                 </div>
+                {status === 'error' && (
+                  <p
+                    className="mt-4 ff-mono text-[10.5px] uppercase tracking-[0.22em] text-red"
+                    style={{ animation: 'confirm-reveal 200ms ease-out both' }}
+                  >
+                    Something went wrong — please try again or email hello@futreeng.com
+                  </p>
+                )}
               </form>
-            ) : (
-              <div className="border-[2px] p-10" style={{ borderColor: '#F2EDE4' }}>
-                <div className="ff-mono text-[10.5px] uppercase tracking-[0.28em] mb-4 text-red">
-                  Confirmation — Form 01
-                </div>
-                <div className="ff-fraunces font-black tracking-[-0.025em] leading-[1] text-[40px] md:text-[56px]">
-                  Got it.{' '}
-                  <em className="italic text-red">Talk soon.</em>
-                </div>
-                <p className="mt-5 text-[16px] leading-[1.65] max-w-[44ch]" style={{ color: '#F2EDE4DD' }}>
-                  We&apos;ll write back to {data.email || 'you'} within two business days. If it&apos;s urgent,
-                  hello@futreeng.com lands in both our inboxes.
-                </p>
-              </div>
             )}
           </div>
         </div>
