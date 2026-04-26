@@ -10,7 +10,7 @@ const ITEMS = [
   },
   {
     q: 'What does an engagement cost?',
-    a: "A typical site or app runs $35–80K, eight weeks. Heritage and platform work runs longer. We send a written proposal after our first conversation. No retainer required, but most clients keep us on quarterly.",
+    a: "Each engagement is scoped and priced individually. After our first conversation, we send a written proposal — fixed scope, fixed price, no hourly billing. Most clients stay on a quarterly retainer after launch.",
   },
   {
     q: 'How are you different from an agency?',

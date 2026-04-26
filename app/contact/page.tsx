@@ -36,7 +36,7 @@ const FAQ_SCHEMA = {
       name: 'What does an engagement cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A typical site or app runs $35–80K, eight weeks. Heritage and platform work runs longer. We send a written proposal after our first conversation. No retainer required, but most clients keep us on quarterly.',
+        text: 'Each engagement is scoped and priced individually. After our first conversation, we send a written proposal — fixed scope, fixed price, no hourly billing. Most clients stay on a quarterly retainer after launch.',
       },
     },
     {
@@ -86,6 +86,10 @@ export default function ContactPage() {
         </h1>
         <p className="mt-7 text-[16px] md:text-[18px] leading-[1.55] max-w-[58ch]">
           A 30-minute conversation. No deck. Just you, us, and the actual job in front of you.
+        </p>
+        <p className="mt-5 text-[16px] md:text-[18px] leading-[1.55] max-w-[58ch]">
+          We&apos;re best suited for serious engagements — typically multi-week, dedicated builds.
+          If you&apos;re scoping a quick one-pager or working at a freelance budget, we may not be the right studio.
         </p>
       </div>
 

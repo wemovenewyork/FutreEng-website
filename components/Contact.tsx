@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { FullRule } from '@/components/ui/FullRule';
 
 const SCOPE_OPTIONS = ['', 'Web app / PWA', 'Marketing / heritage site', 'Internal tools', 'Ongoing studio retainer', 'Not sure yet'];
-const BUDGET_OPTIONS = ['', 'Under $35K', '$35–80K', '$80–150K', '$150K+', 'Open'];
 
 type Status = 'idle' | 'submitting' | 'sent' | 'error';
 
@@ -77,7 +76,7 @@ function Textarea({
 }
 
 export function Contact({ sidebar = true }: { sidebar?: boolean }) {
-  const [data, setData] = useState({ name: '', org: '', email: '', scope: '', budget: '', note: '' });
+  const [data, setData] = useState({ name: '', org: '', email: '', scope: '', note: '' });
   const [status, setStatus] = useState<Status>('idle');
   const [shakeKey, setShakeKey] = useState(0);
   const set = (k: keyof typeof data) => (v: string) => setData((d) => ({ ...d, [k]: v }));
@@ -117,6 +116,10 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
               <p className="mt-7 text-[16px] md:text-[18px] leading-[1.6] max-w-[42ch]" style={{ color: '#F2EDE4DD' }}>
                 A 30-minute conversation. No deck. Just you, us, and the actual job in front of you.
                 We&apos;ll write back within two business days.
+              </p>
+              <p className="mt-5 text-[16px] md:text-[18px] leading-[1.6] max-w-[42ch]" style={{ color: '#F2EDE4DD' }}>
+                We&apos;re best suited for serious engagements — typically multi-week, dedicated builds.
+                If you&apos;re scoping a quick one-pager or working at a freelance budget, we may not be the right studio.
               </p>
               <div className="mt-10 ff-mono text-[11px] uppercase tracking-[0.24em] leading-[2.1]" style={{ color: '#F2EDE4AA' }}>
                 <div><span className="text-red">Email — </span>hello@futreeng.com</div>
@@ -161,8 +164,7 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
                   <Field label="Your name" value={data.name} onChange={set('name')} />
                   <Field label="Organization" value={data.org} onChange={set('org')} />
                   <Field label="Email" type="email" value={data.email} onChange={set('email')} className="md:col-span-2" />
-                  <Select label="Scope" value={data.scope} onChange={set('scope')} options={SCOPE_OPTIONS} />
-                  <Select label="Budget range" value={data.budget} onChange={set('budget')} options={BUDGET_OPTIONS} />
+                  <Select label="Scope" value={data.scope} onChange={set('scope')} options={SCOPE_OPTIONS} className="md:col-span-2" />
                   <Textarea label="A few lines about the work" value={data.note} onChange={set('note')} className="md:col-span-2" />
                 </div>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
