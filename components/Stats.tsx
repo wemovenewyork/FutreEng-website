@@ -1,5 +1,5 @@
 const STATS = [
-  { n: '12', label: 'Projects shipped', sub: 'across NYC + NJ', red: false },
+  { n: '12', label: 'Projects shipped', sub: 'across the tri-state area', red: false },
   { n: '02', label: 'Founders, both hands-on', sub: 'every project, end to end', red: true },
   { n: '08wk', label: 'Median engagement', sub: 'from kickoff to launch', red: false },
   { n: '100%', label: 'Custom-built', sub: 'no templates, no resellers', red: false },

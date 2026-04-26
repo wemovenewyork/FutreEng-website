@@ -7,17 +7,17 @@ import { CASES } from '@/lib/cases';
 export const metadata: Metadata = {
   title: 'Selected Work',
   description:
-    'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+    'Twelve projects shipped across the tri-state area. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
   openGraph: {
     title: 'Selected Work — FutreEng',
     description:
-      'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+      'Twelve projects shipped across the tri-state area. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
     url: 'https://futreeng.com/work',
   },
   twitter: {
     title: 'Selected Work — FutreEng',
     description:
-      'Twelve projects shipped across NYC and NJ. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
+      'Twelve projects shipped across the tri-state area. Web apps, PWAs, and digital products for community organizations, labor groups, and operators.',
   },
 };
 
@@ -37,7 +37,7 @@ export default function WorkPage() {
           </em>
         </h1>
         <p className="mt-7 text-[16px] md:text-[18px] leading-[1.55] max-w-[58ch]">
-          Live work for clients across NYC and NJ. Each engagement begins with a conversation and
+          Live work for clients across the tri-state area. Each engagement begins with a conversation and
           ends with something we&apos;d put our names on.
         </p>
       </div>

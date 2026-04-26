@@ -52,7 +52,7 @@ const FAQ_SCHEMA = {
       name: 'Who do you build for?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Community organizations, labor unions, transit-adjacent operators, and small NYC/NJ businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.',
+        text: 'Community organizations, labor unions, transit-adjacent operators, and small tri-state businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.',
       },
     },
     {
@@ -110,7 +110,7 @@ export default function Home() {
           kicker="Selected Work"
           title="Twelve projects."
           italicTail="One studio."
-          dek="Live work for clients across NYC and NJ. Each engagement begins with a conversation and ends with something we'd put our names on."
+          dek="Live work for clients across the tri-state area. Each engagement begins with a conversation and ends with something we'd put our names on."
         />
         <FeatureCase />
         <CaseGrid limit={4} />

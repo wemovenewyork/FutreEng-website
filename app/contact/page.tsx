@@ -28,7 +28,7 @@ const FAQ_SCHEMA = {
       name: 'Who do you build for?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Community organizations, labor unions, transit-adjacent operators, and small NYC/NJ businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.',
+        text: 'Community organizations, labor unions, transit-adjacent operators, and small tri-state businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.',
       },
     },
     {

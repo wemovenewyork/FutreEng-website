@@ -21,7 +21,7 @@ export function Hero() {
               <div className="text-neutral-500">Established</div>
               <div className="mb-3">2026</div>
               <div className="text-neutral-500">Based in</div>
-              <div className="mb-3">NYC + NJ</div>
+              <div className="mb-3">NYC Tri-State</div>
               <div className="text-neutral-500">Studio of</div>
               <div className="mb-3">Two</div>
               <div className="text-neutral-500">Current issue</div>

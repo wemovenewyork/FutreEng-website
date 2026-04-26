@@ -6,7 +6,7 @@ import { FullRule } from '@/components/ui/FullRule';
 const ITEMS = [
   {
     q: 'Who do you build for?',
-    a: "Community organizations, labor unions, transit-adjacent operators, and small NYC/NJ businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.",
+    a: "Community organizations, labor unions, transit-adjacent operators, and small tri-state businesses. Most of our clients have a real-world job that software gets in the way of, and we get out of the way.",
   },
   {
     q: 'What does an engagement cost?',

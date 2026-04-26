@@ -34,7 +34,7 @@ const ORG_SCHEMA = {
     addressRegion: 'NY',
     addressCountry: 'US',
   },
-  areaServed: ['NYC', 'NJ'],
+  areaServed: ['New York', 'New Jersey', 'Connecticut'],
   description: 'A boutique software studio in New York.',
 };
 

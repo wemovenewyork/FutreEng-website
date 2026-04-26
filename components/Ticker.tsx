@@ -3,7 +3,7 @@ const ITEMS = [
   'Q3 · 2026',
   'Currently accepting 3 projects',
   'Studio of two',
-  'Based in NYC + NJ',
+  'Based in NYC Tri-State',
   'We Move New York',
   'Adelphic Union Lodge No. 14',
   'Tramell Thompson',

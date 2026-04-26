@@ -120,7 +120,7 @@ export function Contact({ sidebar = true }: { sidebar?: boolean }) {
               </p>
               <div className="mt-10 ff-mono text-[11px] uppercase tracking-[0.24em] leading-[2.1]" style={{ color: '#F2EDE4AA' }}>
                 <div><span className="text-red">Email — </span>hello@futreeng.com</div>
-                <div><span className="text-red">Studio — </span>NYC + NJ, by appointment</div>
+                <div><span className="text-red">Studio — </span>NYC Tri-State, by appointment</div>
                 <div><span className="text-red">Hours — </span>Mon–Thu, 9–6 ET</div>
                 <div><span className="text-red">Reply — </span>Within two business days</div>
               </div>
