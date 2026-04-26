@@ -7,14 +7,14 @@ const FOUNDERS = [
     role: 'Co-founder · CEO',
     bg: '#D63B27',
     copy: "Comes from the organizer side — TWU Local 100, We Move New York. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
-    meta: ['Brooklyn, NY', 'haron@futreeng.com'],
+    meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com'],
   },
   {
     name: 'Joseph Pannetta',
     role: 'Co-founder · CTO',
     bg: '#1F2D5C',
     copy: "Engineering lead. Builds production software, maintains the studio's technical bench, and writes most of the code that ends up in front of users.",
-    meta: ['Jersey City, NJ', 'joseph@futreeng.com'],
+    meta: ['Jersey City, NJ', 'JosephPannetta@futreeng.com'],
   },
 ];
 
