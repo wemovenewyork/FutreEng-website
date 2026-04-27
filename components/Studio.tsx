@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
+import Image from 'next/image';
 import { FullRule } from '@/components/ui/FullRule';
 
 const FOUNDERS = [
@@ -10,6 +10,7 @@ const FOUNDERS = [
       "30+ years in public transportation. Founder of We Move New York, the largest brand for transit professionals. Runs client work, strategy, and the studio's relationship with the people doing real work in the city.",
       "Hands-on across the stack alongside Joseph — front-end work, content systems, and the production-side details that turn a design into a live site. Brings the client's perspective to every project: what actually breaks on the ground, what users will and won't use, and how technology lands inside organizations that have run for decades without it.",
     ],
+    imagePath: '/images/haron.jpg',
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com'],
   },
   {
@@ -20,6 +21,7 @@ const FOUNDERS = [
       "Engineering lead. Builds production software, maintains the studio's technical bench, and writes most of the code that ends up in front of users.",
       "Works across the full stack: React, Next.js, and Astro on the front end; Node, Python, and Postgres on the back end; Vercel, AWS, and edge infrastructure for deployment. Builds AI-augmented systems and integrations against the Anthropic and OpenAI APIs. Specializes in PWAs that work offline and in low-signal environments — the kind of software that has to keep running when the network doesn't.",
     ],
+    imagePath: '/images/joseph.png',
     meta: ['Akron, OH', 'JosephPannetta@futreeng.com'],
   },
 ];
@@ -51,14 +53,15 @@ export function Studio() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
           {FOUNDERS.map((p, i) => (
             <div key={i}>
-              {/* solid={true}: these are deliberate brand-color blocks, not missing-photo placeholders */}
-              <ImagePlaceholder
-                bg={p.bg}
-                caption={`Portrait — ${p.name}, ${p.role.split(' · ')[1]}`}
-                ratio="aspect-[4/5]"
-                monoColor="#F2EDE4"
-                solid
-              />
+              <div className="aspect-[4/5] w-full relative overflow-hidden">
+                <Image
+                  src={p.imagePath}
+                  alt={`Portrait — ${p.name}`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
               <div className="mt-6 ff-mono text-[10.5px] uppercase tracking-[0.28em] text-red">{p.role}</div>
               <h4 className="ff-fraunces mt-2 font-black tracking-[-0.025em] leading-[1] text-[40px] md:text-[52px]">
                 {p.name}
