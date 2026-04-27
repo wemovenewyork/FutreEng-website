@@ -29,6 +29,7 @@ const FOUNDERS = [
       "Hands-on across the stack alongside Joseph — front-end work, content systems, and the production-side details that turn a design into a live site. Brings the client's perspective to every project: what actually breaks on the ground, what users will and won't use, and how technology lands inside organizations that have run for decades without it.",
     ],
     imagePath: '/images/haron.jpg',
+    objectPosition: 'object-top',
     quote: '"The next generation of transformative technology companies will come from understanding industries deeply and building solutions from the inside out."',
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com', 'We Move New York'],
   },
@@ -41,6 +42,7 @@ const FOUNDERS = [
       "Works across the full stack: React, Next.js, and Astro on the front end; Node, Python, and Postgres on the back end; Vercel, AWS, and edge infrastructure for deployment. Builds AI-augmented systems and integrations against the Anthropic and OpenAI APIs. Specializes in PWAs that work offline and in low-signal environments — the kind of software that has to keep running when the network doesn't.",
     ],
     imagePath: '/images/joseph.png',
+    objectPosition: 'object-center',
     quote: '"Build companies that leverage advanced software and intelligent systems to reshape how businesses operate."',
     meta: ['Akron, OH', 'JosephPannetta@futreeng.com', 'System Architecture', 'AI & Automation'],
   },
@@ -85,7 +87,7 @@ export default function StudioPage() {
                     src={p.imagePath}
                     alt={`Portrait — ${p.name}`}
                     fill
-                    className="object-cover object-top"
+                    className={`object-cover ${p.objectPosition}`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
