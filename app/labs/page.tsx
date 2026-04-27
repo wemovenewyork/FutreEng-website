@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FullRule } from '@/components/ui/FullRule';
-import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
 
 export const metadata: Metadata = {
   title: 'Labs',
@@ -82,13 +82,14 @@ export default function LabsPage() {
             </div>
           </div>
 
-          {/* Image placeholder */}
-          <div className="mb-12">
-            <ImagePlaceholder
-              bg="#F2EDE4"
-              caption="Pipeline — Phase-by-phase build graph, One Forge workspace"
-              ratio="aspect-[16/9]"
-              monoColor="#1A1715"
+          {/* Forge workspace screenshot */}
+          <div className="aspect-[16/9] w-full relative overflow-hidden mb-12">
+            <Image
+              src="/images/forge-screenshot.png"
+              alt="The One Forge workspace — pipeline view"
+              fill
+              className="object-cover object-top"
+              sizes="100vw"
             />
           </div>
 
