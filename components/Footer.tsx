@@ -41,10 +41,8 @@ export function Footer() {
     <footer style={{ backgroundColor: '#F2EDE4', color: '#1A1715' }}>
       <FullRule />
       <div className="max-w-[1440px] mx-auto px-8 md:px-10 py-16 md:py-20">
-        <div className="overflow-x-hidden pb-6">
-          <div className="ff-fraunces text-[88px] sm:text-[140px] md:text-[200px] lg:text-[240px] font-black tracking-[-0.045em] leading-[0.85] whitespace-nowrap">
-            FutreEng<span style={{ color: '#D63B27' }}>.</span>
-          </div>
+        <div className="ff-fraunces text-[88px] sm:text-[140px] md:text-[200px] lg:text-[240px] font-black tracking-[-0.045em] leading-[0.85] whitespace-nowrap pb-4">
+          FutreEng<span style={{ color: '#D63B27' }}>.</span>
         </div>
 
         <div className="mt-12 grid grid-cols-12 gap-8 border-t-[2px] border-ink pt-10">
