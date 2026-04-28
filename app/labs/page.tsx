@@ -88,7 +88,7 @@ export default function LabsPage() {
               src="/images/forge-screenshot.png"
               alt="The One Forge workspace — pipeline view"
               fill
-              className="object-cover object-top"
+              className="object-contain object-top"
               sizes="100vw"
             />
           </div>
