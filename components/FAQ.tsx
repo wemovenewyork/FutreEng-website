@@ -18,7 +18,7 @@ const ITEMS = [
   },
   {
     q: 'Do you take on early-stage tech startups?',
-    a: "Rarely. We're the wrong studio for venture-backed product MVPs. We're the right studio for organizations who already have a job and need software that respects it.",
+    a: "Yes — if the fit is right. We work best with early-stage founders who know their industry and need software built to last, not just to demo. If you're building something real and want a studio that treats your product like a production system from day one, we're interested.",
   },
   {
     q: 'Can we keep working with you after launch?',
