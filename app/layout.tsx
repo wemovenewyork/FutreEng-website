@@ -23,9 +23,9 @@ const ORG_SCHEMA = {
     },
     {
       '@type': 'Person',
-      name: 'Joseph Pannetta',
+      name: 'Joseph Panetta',
       jobTitle: 'Co-founder, CTO',
-      email: 'JosephPannetta@futreeng.com',
+      email: 'JosephPanetta@futreeng.com',
     },
   ],
   address: {

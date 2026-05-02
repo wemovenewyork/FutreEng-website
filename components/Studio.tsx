@@ -15,7 +15,7 @@ const FOUNDERS = [
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com'],
   },
   {
-    name: 'Joseph Pannetta',
+    name: 'Joseph Panetta',
     role: 'Co-founder · CTO',
     bg: '#1F2D5C',
     copy: [
@@ -24,7 +24,7 @@ const FOUNDERS = [
     ],
     imagePath: '/images/joseph.png',
     objectPosition: 'object-center',
-    meta: ['Akron, OH', 'JosephPannetta@futreeng.com'],
+    meta: ['Akron, OH', 'JosephPanetta@futreeng.com'],
   },
 ];
 
@@ -48,7 +48,7 @@ export function Studio() {
           <em className="italic text-red">One studio.</em>
         </h2>
         <p className="mt-8 text-[18px] md:text-[20px] leading-[1.55] max-w-[60ch] font-medium">
-          FutreEng is Joseph Pannetta and Haron Wilson. Every project is touched by both of us,
+          FutreEng is Joseph Panetta and Haron Wilson. Every project is touched by both of us,
           beginning to end. There is no &ldquo;team&rdquo; being assigned — there&apos;s us, and the work.
         </p>
 

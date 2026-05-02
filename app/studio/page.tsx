@@ -5,17 +5,17 @@ import { FullRule } from '@/components/ui/FullRule';
 export const metadata: Metadata = {
   title: 'Studio',
   description:
-    'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+    'Two people. One studio. Joseph Panetta and Haron Wilson build digital products from inside the industries they know.',
   openGraph: {
     title: 'Studio — FutreEng',
     description:
-      'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+      'Two people. One studio. Joseph Panetta and Haron Wilson build digital products from inside the industries they know.',
     url: 'https://futreeng.com/studio',
   },
   twitter: {
     title: 'Studio — FutreEng',
     description:
-      'Two people. One studio. Joseph Pannetta and Haron Wilson build digital products from inside the industries they know.',
+      'Two people. One studio. Joseph Panetta and Haron Wilson build digital products from inside the industries they know.',
   },
 };
 
@@ -34,7 +34,7 @@ const FOUNDERS = [
     meta: ['Brooklyn, NY', 'HaronWilson@futreeng.com', 'We Move New York'],
   },
   {
-    name: 'Joseph Pannetta',
+    name: 'Joseph Panetta',
     role: 'Co-founder · CTO',
     bg: '#1F2D5C',
     bio: [
@@ -44,7 +44,7 @@ const FOUNDERS = [
     imagePath: '/images/joseph.png',
     objectPosition: 'object-center',
     quote: '"Build companies that leverage advanced software and intelligent systems to reshape how businesses operate."',
-    meta: ['Akron, OH', 'JosephPannetta@futreeng.com', 'System Architecture', 'AI & Automation'],
+    meta: ['Akron, OH', 'JosephPanetta@futreeng.com', 'System Architecture', 'AI & Automation'],
   },
 ];
 
@@ -71,7 +71,7 @@ export default function StudioPage() {
           </em>
         </h1>
         <p className="mt-8 text-[18px] md:text-[22px] leading-[1.55] max-w-[60ch]">
-          FutreEng is Joseph Pannetta and Haron Wilson. Every project is touched by both of us,
+          FutreEng is Joseph Panetta and Haron Wilson. Every project is touched by both of us,
           beginning to end. There is no &ldquo;team&rdquo; being assigned — there&apos;s us, and the work.
         </p>
       </div>
